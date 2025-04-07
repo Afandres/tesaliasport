@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F7EFD8;
+    color: #1C1C1C;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    background-color: #F7EFD8;
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    padding: 100px 0;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    z-index: 1000;
+}
+
+.logo {
+    color: #FECF4D;
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.menu .navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.menu .navbar ul li {
+    position: relative;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 10px;
+    color: #1C1C1C;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+/* Carrusel */
+.carousel {
+    width: 100%;
+    max-width: 1500px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 18px 12px rgba(255, 139, 77, 0.3);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-txt {
+    flex-basis: 100%;
+}
+
+.categories-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.categories-section h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #E65F9A;
+}
+
+.categories-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.categories-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.category-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    box-shadow: 0 10px 25px rgba(255, 139, 77, 0.3);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    background-color: #E65F9A;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FF8B4D;
+}
+
+.footer {
+    background-color: #1C1C1C;
+    padding: 50px 0;
+    color: #FECF4D;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.link h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #FECF4D;
+}
+
+.link a {
+    color: #FFFFFF;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media(max-width:991px) {
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #1C1C1C;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu .navbar ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .menu .navbar ul li a {
+        color: #FFFFFF;
+    }
+
+    #menu:checked ~ .navbar {
+        display: flex;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .categories-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
